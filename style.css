@@ -12,7 +12,6 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-<<<<<<< c45528bc0600ef38d3cd273e88635d3066d088b1
 .vertical-line {
   height: 200px;
   width: 3px;
@@ -24,16 +23,6 @@
   background-color: #EEE;
   padding: 40px;
   position: relative;
-=======
-.main-images {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  align-items:center;
-  background-color:white;
-  margin: 40px;
-  flex-wrap:wrap;
->>>>>>> last fixes for wraping the content
 }
 
 .features-container {
