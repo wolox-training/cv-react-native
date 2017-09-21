@@ -73,6 +73,44 @@
   position: absolute;
 }
 
+.shadow {
+  box-shadow: 0 -5px 5px #EEE;
+}
+
+.footer {
+  background-color: #F5C85F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  padding-bottom: 50px;
+}
+
+.subscription-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.input {
+  border: none;
+  background: #FFF;
+  width: 300px;
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.rounded-input {
+  border-radius: 9px;
+  padding: 5px;
+  }
+
+.subscribe-button {
+  border: 1px solid #FFF;
+  border-radius: 7px;
+  padding: 12px;
+}
+
 @media screen and (max-width: 1024px) {
   .features-container {
     flex-direction: column;
@@ -82,5 +120,3 @@
   .vertical-line {
     display: none;
  }
-
-}
