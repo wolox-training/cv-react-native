@@ -1,0 +1,20 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-section {
+  border-top: 8px solid #F5C85F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.vertical-line {
+  height: 200px;
+  width: 3px;
+  background: linear-gradient(transparent, #FFD700, transparent);
+  margin: 0 30px;
+}
