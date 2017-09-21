@@ -92,7 +92,11 @@
   font-size: 16px;
 }
 
-.input {
+.white-font {
+  color: #FFF;
+}
+
+.subscription-input {
   border: none;
   background: #FFF;
   width: 300px;
