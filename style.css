@@ -74,7 +74,9 @@
 }
 
 .shadow {
-   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+   /*box-shadow: 0px 0 10px #EEE;*/
+   /*box-shadow:  0px 0 20px #EEE;*/
+   box-shadow: 0 -1px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
 .footer {
@@ -85,15 +87,16 @@
   flex-direction: column;
   padding: 30px;
   padding-bottom: 50px;
-  margin: 4px 0px 0px 0px;
+  margin: 6px 0px 0px 0px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .footer::before {
-  height: 5px;
+  height: 10px;
   content: "";
   width: 100%;
-  top: -15px;
+  top: -10px;
   left: 0;
   position: absolute;
 }
