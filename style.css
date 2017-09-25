@@ -85,15 +85,6 @@
   box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.footer::before {
-  height: 10px;
-  content: "";
-  width: 100%;
-  top: -10px;
-  left: 0;
-  position: absolute;
-}
-
 .subscription-title {
   margin-bottom: 20px;
   font-size: 16px;
@@ -105,20 +96,21 @@
 
 .subscription-input {
   background: #FFF;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 35px;
   margin-bottom: 15px;
 }
 
 .rounded-input {
-   border-radius: 10px;
-   padding: 5px;
+  border-radius: 10px;
+  padding: 5px;
   }
 
 .subscribe-button {
-   border: 1px solid #FFF;
-   border-radius: 10px;
-   padding: 15px;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 @media screen and (max-width: 1024px) {
