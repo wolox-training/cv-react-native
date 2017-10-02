@@ -59,6 +59,7 @@
 
 .default-cover{
   background-color: #D8D8D8;
+  object-fit: none;
 }
 
 .search-icon {
