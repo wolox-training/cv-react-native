@@ -1,0 +1,131 @@
+.main-section {
+  border-top: 8px solid #F5C85F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: 40px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.vertical-line {
+  height: 200px;
+  width: 3px;
+  background: linear-gradient(transparent, #FFD700, transparent);
+  margin: 0 30px;
+}
+
+.feature-group {
+  background-color: #EEE;
+  padding: 40px;
+  position: relative;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 0;
+  margin: 0 50px;
+  max-width: 200px;
+}
+
+.feature-title {
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.feature-description {
+  color: #999;
+}
+
+.text {
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.feature-image {
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.feature-group::before {
+  background: url("images/triangle.png");
+  height: 12px;
+  content: "";
+  width: 100%;
+  top: -12px;
+  left: 0;
+  position: absolute;
+}
+
+.footer {
+  background-color: #F5C85F;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  position: relative;
+  flex-wrap: wrap;
+  box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.subscription-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.white-text {
+  color: #FFF;
+}
+
+.subscription-input {
+  background: #FFF;
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  margin-bottom: 15px;
+}
+
+.rounded-input {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.subscribe-button {
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .features-container {
+    flex-direction: column;
+  }
+
+  .main-image,
+  .vertical-line {
+    display: none;
+  }
+}
