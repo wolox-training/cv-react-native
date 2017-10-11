@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import LoginStylesheet from './Login.css'
 import WbooksLogo from '../../ASSETS/wbooks_logo.svg'
+import { Route, Redirect } from 'react-router'
 
 class Login extends React.Component {
 
@@ -10,6 +11,7 @@ class Login extends React.Component {
     password: '',
     passwordErrorText: '',
     usernameErrorText:'',
+    isLoggedIn: false
   }
 
   handleUserNameChanged = (event) => {
@@ -51,11 +53,14 @@ class Login extends React.Component {
       || this.state.password.length === 0) {
       this.setState({passwordErrorText: 'Ambos campos son requeridos'});
     } else {
-      alert("ahora hay q hacer el login!!");
-    }
+      this.setState({isLoggedIn: true});
+       }
 }
 
   render() {
+    if(this.state.isLoggedIn) {
+      return <Redirect to='/' />;
+    }
     return (
       <div className="login-container">
         <div className="login-form-container">
