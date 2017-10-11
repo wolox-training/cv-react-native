@@ -1,0 +1,9 @@
+.book-image-cover {
+  width: 128px;
+  height: 182px;
+}
+
+.default-cover{
+  background-color: #D8D8D8;
+  object-fit: none;
+}
