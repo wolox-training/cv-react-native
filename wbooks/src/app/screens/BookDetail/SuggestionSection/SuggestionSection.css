@@ -1,0 +1,22 @@
+.suggested-book {
+  display: flex;
+  height: 124px;
+  width: 74px;
+  margin-left: 40px;
+}
+
+.suggestion-container {
+    max-width: 722px;
+    width: 100%;
+    align-items: center;
+    margin: 20px auto;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #00ADEE;
+}
+
+.suggestion-title {
+  font-size:20px;
+  color:#A5CD39;
+  line-height:19px;
+  text-align:left;
+}

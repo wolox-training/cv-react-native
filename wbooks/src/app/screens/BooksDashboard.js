@@ -1,8 +1,9 @@
 import React from 'react';
 import '../../App.css';
 import booksList from '../../app/utils/booksList';
-import Book from '../../app/components/Book.js';
+import Book from '../components/Book/Book.js';
 import search_icon from '../ASSETS/search.svg';
+import './BookDashboard.css'
 
 class BooksDashboard extends React.Component {
 
@@ -68,7 +69,7 @@ class BooksDashboard extends React.Component {
               className="search-input" onChange={this.handleTextChange}
               value={this.state.filterText}/>
             <img src = {search_icon} className="search-icon"
-              onClick={this.handleFilter} />
+              onClick={this.handleFilter} alt="cover image"/>
           </form>
           <div className="books-container">
             {

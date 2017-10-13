@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import LoginStylesheet from './Login.css'
-import WbooksLogo from '../../ASSETS/wbooks_logo.svg'
 import { Route, Redirect } from 'react-router'
+
+import './Login.css'
+import WbooksLogo from '../../ASSETS/wbooks_logo.svg'
+import { login } from '../../../services/authentication.js'
 
 class Login extends React.Component {
 
@@ -11,14 +13,15 @@ class Login extends React.Component {
     password: '',
     passwordErrorText: '',
     usernameErrorText:'',
-    isLoggedIn: false
+    isLoggedIn: false,
+    loading: false
   }
 
   handleUserNameChanged = (event) => {
     const username = event.target.value
     this.setState({username: event.target.value});
     var emailAddress =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     if (!emailAddress.test(username)) {
       this.setState({usernameErrorText: 'Ingrese un email valido'})
     } else {
@@ -28,7 +31,7 @@ class Login extends React.Component {
 
   handlePasswordChanged = (event) => {
     const password = event.target.value
-    this.setState({password});
+    this.setState({password: event.target.value});
 
       if (password.length === 0) {
         this.setState({passwordErrorText:
@@ -38,24 +41,32 @@ class Login extends React.Component {
             'La contraseña debe tener entre 8 y 52 caracteres'});
       } else {
           var hasNumber = /\d/;
-          var hasChar = /\s/;
-          if (!hasNumber.test(password) && (!hasChar.test(password))) {
+          if (!hasNumber.test(password)) {
             this.setState({passwordErrorText:
-              'La contraseña debe al menos un numero y una letra'});
+              'La contraseña debe tener al menos un numero'});
           } else {
               this.setState({passwordErrorText: ''});
           }
       }
   }
 
-  handleLogin = () => {
+  handleLogin = (event) => {
+    event.preventDefault();
     if (this.state.username.length === 0
       || this.state.password.length === 0) {
-      this.setState({passwordErrorText: 'Ambos campos son requeridos'});
+      this.setState({passwordErrorText: 'Ambos campos son requeridos.'});
     } else {
-      this.setState({isLoggedIn: true});
-       }
-}
+      this.setState({loading: true});
+      login(this.state.username, this.state.password).then((response) => {
+        this.setState({isLoggedIn: true});
+        localStorage.setItem('auth-token', response.data.token);
+      }).catch((error)=> {
+        this.setState({passwordErrorText: 'Los datos ingresados no son validos en el sistema·'});
+      }).then(() => {
+          this.setState({loading: false})
+          })
+    }
+  }
 
   render() {
     if(this.state.isLoggedIn) {
@@ -88,9 +99,9 @@ class Login extends React.Component {
               onChange={this.handlePasswordChanged}
               value={this.state.password}
             />
-            { this.state.passwordErrorText && <span className="error-message">
-              {this.state.passwordErrorText}</span>}
-            <button className="login-button button-font">Login</button>
+            {this.state.passwordErrorText && <span className="error-message">
+            {this.state.passwordErrorText}</span>}
+            <button disabled={this.state.loading} className="login-button button-font">Login</button>
             <h5 className="register-user-text"> Registrarse </h5>
           </form>
         </div>

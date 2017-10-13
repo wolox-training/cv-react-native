@@ -1,0 +1,67 @@
+.book-detail-container {
+  display: flex;
+  max-width: 722px;
+  width: 100%;
+  align-items: center;
+  margin: 20px auto;
+  padding-bottom: 36px;
+  border-bottom: 2px solid #00ADEE;
+}
+
+.book-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-image {
+  min-width: 190px;
+  height: 270px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.book-details-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+.book-details-author {
+  font-size: 16px;
+  font-weight: normal;
+  color: #4A4A4A;
+  margin: 0 0 22px 0;
+}
+
+.book-details-year {
+  font-size: 16px;
+  color: #4A4A4A;
+  font-weight: normal;
+  margin: 0 0 8px 0;
+}
+
+.book-details-genre {
+  font-size: 16px;
+  color: #4A4A4A;
+  font-weight: normal;
+  margin: 0 0 13px 0;
+}
+
+.book-details-sinopsis {
+  font-size: 14px;
+  color: #999;
+  font-weight: normal;
+  margin: 0 0 44px 0;
+}
+
+.rent-button {
+  background:#00ADEE;
+  width: 192px;
+  height: 38px;
+  color: #FFF;
+  border: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
