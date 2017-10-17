@@ -5,20 +5,32 @@ import BookDetailSection from './BookDetailSection/BookDetailSection.js'
 import SuggestionSection from './SuggestionSection/SuggestionSection.js'
 import CommentSection from './CommentSection/CommentSection.js'
 import { Link } from 'react-router-dom'
+import { getBookById } from '../../../services/booksService.js'
 import './BookDetail.css'
 
 const bookById = (id) => booksList.find((book) => book.id === parseInt(id))
 
 class BookDetail extends React.Component {
+
+  state = {
+    book: ''
+  }
+
+  componentWillMount = () => {
+    getBookById(this.props.match.params.id).then((response) => {
+      console.log(response);
+      this.setState({book: response.data});
+    })
+  }
+
   render() {
-    const book = bookById(this.props.match.params.id);
     return (
       <div>
         <Link to='/'>
           <h5 className="back-button-link"> Volver </h5>
         </Link>
         <BookDetailSection
-          book={book}
+          book={this.state.book}
         />
         <SuggestionSection
           elements={booksList[0]}>

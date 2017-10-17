@@ -30,7 +30,6 @@ class BooksDashboard extends React.Component {
 
   componentWillMount = () => {
     getBooks().then((response) => {
-      console.log(response);
       this.setState({ booksList: response.data });
     })
   }
