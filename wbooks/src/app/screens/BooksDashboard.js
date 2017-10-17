@@ -12,7 +12,8 @@ class BooksDashboard extends React.Component {
     filterType: '',
     filterText: '',
     activeFilterType: '',
-    activeFilterText: ''
+    activeFilterText: '',
+    booksList: []
   }
 
   handleTypeChange = (event) => {
@@ -29,12 +30,14 @@ class BooksDashboard extends React.Component {
 
   componentWillMount = () => {
     getBooks().then((response) => {
-      debugger;
+      console.log(response);
+      this.setState({ booksList: response.data });
     })
   }
 
   filteredBooks = () => {
-    return booksList.filter(book => {
+    console.log(this.state.booksList);
+    return this.state.booksList.filter(book => {
       if (this.state.activeFilterType === 'author') {
         return book.author.includes(this.state.activeFilterText);
       } else {
