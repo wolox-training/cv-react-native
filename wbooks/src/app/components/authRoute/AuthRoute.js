@@ -1,12 +1,12 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-
 import { DEFAULT_AUTH, DEFAULT_NO_AUTH } from '../../utils/Constants';
+import accessToken from '../../utils/Constants.js'
 
 class AuthRoute extends React.Component {
 
   render() {
-    const { component: Component, isPrivate, isPublic, accessToken, ...routeProps } = this.props;
+    const { component: Component, isPrivate, isPublic, ...routeProps } = this.props;
     return (
       <Route
         {...routeProps}
