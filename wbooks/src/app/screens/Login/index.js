@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Route, Redirect } from 'react-router'
-
 import './Login.css'
 import WbooksLogo from '../../ASSETS/wbooks_logo.svg'
 import { login } from '../../../services/authentication.js'
@@ -57,14 +56,12 @@ class Login extends React.Component {
       this.setState({passwordErrorText: 'Ambos campos son requeridos.'});
     } else {
       this.setState({loading: true});
-      login(this.state.username, this.state.password).then((response) => {
+      login(this.state.username, this.state.password).then(() => {
         this.setState({isLoggedIn: true});
-        localStorage.setItem('auth-token', response.data.token);
       }).catch((error)=> {
+        this.setState({loading: false})
         this.setState({passwordErrorText: 'Los datos ingresados no son validos en el sistema·'});
-      }).then(() => {
-          this.setState({loading: false})
-          })
+      })
     }
   }
 

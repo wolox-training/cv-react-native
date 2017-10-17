@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { DEFAULT_AUTH, DEFAULT_NO_AUTH } from '../../utils/Constants';
-import accessToken from '../../utils/Constants.js'
+import access_token from '../../utils/Constants.js'
 
 class AuthRoute extends React.Component {
 
+
   render() {
+    const accessToken = localStorage.getItem(access_token);
     const { component: Component, isPrivate, isPublic, ...routeProps } = this.props;
     return (
       <Route
