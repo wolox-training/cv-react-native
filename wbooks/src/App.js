@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import BooksDashboard from './app/screens/BooksDashboard.js';
 import BookDetail from './app/screens/BookDetail/BookDetail.js'
-import Login from './app/screens/Login/index.js'
+import Login from './app/screens/Login/'
 import {BrowserRouter} from 'react-router-dom'
 import { Switch, Route } from 'react-router-dom'
 import AuthRoute from './app/components/authRoute/AuthRoute.js'

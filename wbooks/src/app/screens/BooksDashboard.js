@@ -29,7 +29,6 @@ class BooksDashboard extends React.Component {
 
   componentWillMount = () => {
     getBooks().then((response) => {
-      debugger;
     })
   }
 
