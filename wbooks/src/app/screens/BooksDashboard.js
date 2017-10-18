@@ -13,7 +13,8 @@ class BooksDashboard extends React.Component {
     filterText: '',
     activeFilterType: '',
     activeFilterText: '',
-    booksList: []
+    booksList: [],
+    isLoading: false
   }
 
   handleTypeChange = (event) => {
@@ -28,11 +29,13 @@ class BooksDashboard extends React.Component {
     });
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
+    this.setState({isLoading: true});
     getBooks().then((response) => {
-      this.setState({ booksList: response.data });
+      this.setState({ booksList: response.data, isLoading: false});
     })
   }
+
 
   filteredBooks = () => {
     console.log(this.state.booksList);
@@ -82,7 +85,7 @@ class BooksDashboard extends React.Component {
           </form>
           <div className="books-container">
             {
-              booksItems.length === 0 ? (
+              !this.state.isLoading && booksItems.length === 0 ? (
                 <h2>La busqueda no encontró resultados.</h2>
               ) : (
                 booksItems

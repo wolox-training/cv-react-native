@@ -3,15 +3,16 @@
   height: 124px;
   width: 74px;
   margin-left: 40px;
+  padding: 10px;
 }
 
 .suggestion-container {
-    max-width: 722px;
-    width: 100%;
-    align-items: center;
-    margin: 20px auto;
-    padding-bottom: 30px;
-    border-bottom: 2px solid #00ADEE;
+  max-width: 722px;
+  width: 100%;
+  align-items: center;
+  margin: 20px auto;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #00ADEE;
 }
 
 .suggestion-title {

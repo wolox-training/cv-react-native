@@ -6,3 +6,7 @@ export function login(email, password) {
     api.defaults.headers.common['Authorization'] = response.data.access_token;
   });
 }
+
+export function getAccessToken() {
+  return localStorage.getItem('access_token');
+}
