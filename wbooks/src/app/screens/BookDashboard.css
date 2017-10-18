@@ -35,6 +35,8 @@
   max-width: 722px;
   width: 100%;
   box-sizing: border-box;
+  flex-direction: row;
+  justify-content: baseline;
 }
 
 .selector {

@@ -4,6 +4,7 @@ import booksList from '../../app/utils/booksList';
 import Book from '../components/Book/Book.js';
 import search_icon from '../ASSETS/search.svg';
 import './BookDashboard.css'
+import { getBooks } from '../../services/booksService.js'
 
 class BooksDashboard extends React.Component {
 
@@ -24,6 +25,11 @@ class BooksDashboard extends React.Component {
     this.setState({
       filterText: event.target.value
     });
+  }
+
+  componentWillMount = () => {
+    getBooks().then((response) => {
+    })
   }
 
   filteredBooks = () => {

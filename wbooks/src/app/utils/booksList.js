@@ -6,8 +6,7 @@ const booksInfo = [
       "genre":"Short story",
       "publisher":"Butterworth-Heinemann",
       "year":"1968",
-      "image_url":null,
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":null
    },
    {
       "id":2,
@@ -16,8 +15,7 @@ const booksInfo = [
       "genre":"other",
       "publisher":"Pocket Books",
       "year":"1989",
-      "image_url":null,
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":null
    },
    {
       "id":3,
@@ -26,8 +24,7 @@ const booksInfo = [
       "genre":"suspense",
       "publisher":"Little, Brown",
       "year":"1985",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg"
    },
    {
       "id":4,
@@ -36,8 +33,7 @@ const booksInfo = [
       "genre":"suspense",
       "publisher":"Pocket Books",
       "year":"1989",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg"
    },
    {
       "id":5,
@@ -46,8 +42,7 @@ const booksInfo = [
       "genre":"suspense",
       "publisher":"Pocket Books",
       "year":"1989",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg"
    },
    {
       "id":6,
@@ -56,9 +51,8 @@ const booksInfo = [
       "genre":"suspense",
       "publisher":"Riverhead Books",
       "year":"2015",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/content.jpeg"
+   },
    {
       "id":7,
       "author":"Anthony Doerr",
@@ -66,8 +60,7 @@ const booksInfo = [
       "genre":"suspense",
       "publisher":"Scribner",
       "year":"2014",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/content.jpeg"
    },
    {
       "id":8,
@@ -76,8 +69,7 @@ const booksInfo = [
       "genre":"thriller",
       "publisher":"Ballantine Books",
       "year":"2003",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg"
    },
    {
       "id":9,
@@ -86,8 +78,7 @@ const booksInfo = [
       "genre":"fiction",
       "publisher":"Crown Publishing Group",
       "year":"2011",
-      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg",
-      "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "image_url":"http://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg"
    }
 ]
 
