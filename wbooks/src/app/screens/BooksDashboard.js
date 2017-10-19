@@ -2,9 +2,9 @@ import React from 'react';
 import '../../App.css';
 import booksList from '../../app/utils/booksList';
 import Book from '../components/Book/Book.js';
-import search_icon from '../ASSETS/search.svg';
 import './BookDashboard.css'
 import { getBooks } from '../../services/booksService.js'
+import Layout from './Layout.js'
 
 class BooksDashboard extends React.Component {
 
@@ -67,33 +67,15 @@ class BooksDashboard extends React.Component {
     );
 
     return (
-      <div>
-        <div className="book-list">
-          <form className="search-form">
-            <select className="search-input selector"
-            onChange={this.handleTypeChange} value={this.state.filterType}>
-              <option value="" selected disabled>Seleccionar filtro</option>
-              <option value="title">Titulo</option>
-              <option value="author">Autor</option>
-            </select>
-            <input
-            type="text" name="name" placeholder="Buscar..."
-              className="search-input" onChange={this.handleTextChange}
-              value={this.state.filterText}/>
-            <img src = {search_icon} className="search-icon"
-              onClick={this.handleFilter} alt="cover image"/>
-          </form>
-          <div className="books-container">
-            {
-              !this.state.isLoading && booksItems.length === 0 ? (
-                <h2>La busqueda no encontró resultados.</h2>
-              ) : (
-                booksItems
-              )
-            }
-          </div>
-        </div>
-      </div>
+      <Layout
+        items={booksItems}
+        onTypeChange={this.handleTypeChange}
+        onFilterType={this.filterType}
+        onTextChange={this.handleTextChange}
+        filterTextValue={this.state.filterText}
+        onHandleFilter={this.handleFilter}
+        isLoading={this.state.isLoading}
+      />
     );
   }
 }
