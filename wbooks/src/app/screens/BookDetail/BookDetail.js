@@ -13,12 +13,11 @@ const bookById = (id) => booksList.find((book) => book.id === parseInt(id))
 class BookDetail extends React.Component {
 
   state = {
-    book: ''
+    book: null
   }
 
   componentWillMount = () => {
     getBookById(this.props.match.params.id).then((response) => {
-      console.log(response);
       this.setState({book: response.data});
     })
   }

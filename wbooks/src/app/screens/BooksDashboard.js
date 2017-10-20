@@ -38,7 +38,6 @@ class BooksDashboard extends React.Component {
 
 
   filteredBooks = () => {
-    console.log(this.state.booksList);
     return this.state.booksList.filter(book => {
       if (this.state.activeFilterType === 'author') {
         return book.author.includes(this.state.activeFilterText);
