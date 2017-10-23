@@ -5,5 +5,5 @@ export function getBooks() {
 }
 
 export function getBookById(id) {
-  return api.get('/books:id');
+  return api.get(`/books/${id}`);
 }

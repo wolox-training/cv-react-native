@@ -10,7 +10,7 @@ class Book extends React.Component {
     return (
       <div className="book-item">
         <Link to={`/book/${this.props.book.id}`}>
-          <ImageCover imageURL={this.props.book.image_url} className="book-image-cover"/>
+          <ImageCover image_url={this.props.book.image_url} className="book-image-cover"/>
         </Link>
         <h3 className="book-title">{this.props.book.title}</h3>
         <h4 className="book-author">{this.props.book.author}</h4>

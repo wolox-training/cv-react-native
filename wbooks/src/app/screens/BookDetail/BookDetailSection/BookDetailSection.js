@@ -7,7 +7,7 @@ import './BookDetailSection.css'
 function BookDetailSection({ book }) {
   return (
     <div className="book-detail-container">
-      <ImageCover imageURL={book.image_url} className="book-image"/>
+      <ImageCover image_url={book.image_url} className="book-image"/>
       <div className="book-description">
         <h3 className="book-details-title">{book.title}</h3>
         <h4 className="book-details-author">{book.author}</h4>
@@ -19,6 +19,5 @@ function BookDetailSection({ book }) {
     </div>
   )
 }
-
 
 export default BookDetailSection
