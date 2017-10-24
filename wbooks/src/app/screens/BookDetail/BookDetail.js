@@ -18,7 +18,6 @@ class BookDetail extends React.Component {
 
   componentWillMount = () => {
     getBookById(this.props.match.params.id).then((response) => {
-      console.log(response);
       this.setState({book: response.data});
     })
   }
