@@ -1,9 +1,14 @@
 import { createStore, combineReducers } from 'redux'
 import filters from './filters/redux';
 import books from './books/redux'
+import login from './login/redux'
+import { reducer as formReducer } from 'redux-form'
 
 const rootReducer = combineReducers({
-  filters, books
+  filters,
+  books,
+  login,
+  form: formReducer
 });
 
 const store = createStore(
