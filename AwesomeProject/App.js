@@ -1,11 +1,5 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import Contacts from './src/app/components/contacts'
+import NavigationTabs from './src/app/components/NavigationTabs.js'
 
 import {
   Platform,
@@ -24,7 +18,8 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <Contacts />
+    //  <Contacts />
+    <NavigationTabs/>
     );
   }
 }
