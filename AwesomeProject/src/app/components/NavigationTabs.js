@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-import Contacts from '../screens/contacts';
+import Contacts from '../screens/contacts/Layout.js';
 import Chats from '../screens/chat';
 import Group from '../screens/groups'
 
