@@ -33,7 +33,6 @@ class Contacts extends React.Component {
           <View style={styles.contactInfo}>
             <View>
               <Text style={styles.contactName}>{item.username}</Text>
-              <Text>no hay mensajes</Text>
             </View>
             <View >
               <Image source={{ uri: item.avatar }} style={styles.avatar}/>
