@@ -1,18 +1,18 @@
 const initialState = {
-  contactsList: [],
+  chatsList: [],
   isLoading: false
 };
 
 function reducer(state = initialState, action) {
   switch (action.type) {
-  case 'LOADING_CONTACTS_LIST':
+  case 'LOADING_CHATS_LIST':
     return {
       ...state,
       isLoading: true
     };
-  case 'CONTACT_LIST_LOADED':
+  case 'CHATS_LIST_LOADED':
     return {
-      contactsList: action.payload,
+      chatsList: action.payload,
       isLoading: false
     };
   default:

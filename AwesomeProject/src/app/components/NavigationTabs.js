@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { TabNavigator } from 'react-navigation';
-import Contacts from '../screens/contacts/Layout.js';
-import Chats from '../screens/chat';
-import Group from '../screens/groups'
+import Contacts from '../screens/Contacts';
+import Chats from '../screens/Chats';
+import Groups from '../screens/Groups';
 
 
 const ContactsScreen = () => (
@@ -20,7 +20,7 @@ const ChatsScreen = () => (
 
 const GroupsScreen = () => (
   <View style={{ flex: 1}}>
-    <Group/>
+    <Groups />
   </View>
 );
 

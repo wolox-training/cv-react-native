@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import NavigationTabs from './src/app/components/NavigationTabs.js'
-
+import { Provider } from 'react-redux'
+import NavigationTabs from './src/app/components/NavigationTabs.js';
+import './src/app/config/ReactotronConfig';
+import Store from './src/redux/Store';
 import {
   Platform,
   StyleSheet,
@@ -18,8 +20,9 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-    //  <Contacts />
-    <NavigationTabs/>
+      <Provider store={Store}>
+        <NavigationTabs/>
+      </Provider>
     );
   }
 }

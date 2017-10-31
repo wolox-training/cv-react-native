@@ -1,9 +1,7 @@
 import React from 'react';
-import contactsList from '../../../utils/contactsList';
 import { FlatList, StyleSheet, Text, View, Image, Button } from 'react-native';
 
 const FlatListItemSeparator = () => {
-
     return (
       <View
         style={{
@@ -16,6 +14,7 @@ const FlatListItemSeparator = () => {
   }
 
 class Contacts extends React.Component {
+  _keyExtractor = (item) => item.id;
 
   render() {
     return (
@@ -25,7 +24,8 @@ class Contacts extends React.Component {
         <Button title='+'/>
       </View>
       <FlatList
-        data = {contactsList}
+        keyExtractor={this._keyExtractor}
+        data = {this.props.items}
         style={styles.flatListStyle}
         ItemSeparatorComponent = {this.FlatListItemSeparator}
         renderItem={({item}) =>

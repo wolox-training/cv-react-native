@@ -1,14 +1,16 @@
-import { createStore, combineReducers } from 'redux';
-import contacts from './contacts';
-
+import { createStore,  combineReducers } from 'redux';
+import contacts from './contacts/reducer.js';
+import chat from './chat/reducer.js';
+import groups from './groups/reducer.js';
 
 const rootReducer = combineReducers({
-  contacts
+  contacts,
+  chat,
+  groups
 });
 
-const store = createStore(
-  rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store =  createStore(
+  rootReducer
 );
 
 export default store;

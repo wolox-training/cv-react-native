@@ -1,5 +1,4 @@
 import React from 'react';
-import contactsList from '../../../utils/contactsList';
 import { FlatList, StyleSheet, Text, View, Image, Button } from 'react-native';
 
 const FlatListItemSeparator = () => {
@@ -15,31 +14,31 @@ const FlatListItemSeparator = () => {
     );
   }
 
-class Chats extends React.Component {
+class Groups extends React.Component {
+  _keyExtractor = (item) => item.id;
 
   render() {
     return (
     <View style={styles.container}>
       <View style={styles.addButton}>
         <Button title='Filtrar' style={styles.marginRight}/>
+        <Button title='+' style={styles.addButton}/>
       </View>
       <FlatList
-        data = {contactsList}
+        data = {this.props.groupsList}
         style={styles.flatListStyle}
         ItemSeparatorComponent = {this.FlatListItemSeparator}
+        keyExtractor={this._keyExtractor}
         renderItem={({item}) =>
         <View style={styles.itemContainer}>
           <View style={styles.contactInfo}>
             <View>
-              <Text style={styles.contactName}>{item.username}</Text>
-            </View>
-            <View >
-              <Image source={{ uri: item.avatar }} style={styles.avatar}/>
+              <Text style={styles.name} key={item.id}>{item.name}</Text>
             </View>
           </View>
           <FlatListItemSeparator/>
         </View>
-    }
+      }
       />
     </View>
     )}
@@ -47,7 +46,9 @@ class Chats extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems:'center',
     flex: 1,
+    marginTop: 10
     },
   flatListStyle: {
      width: '100%',
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
     margin: 10,
     flexDirection: 'row'
   },
-  contactName: {
+  name: {
     color: '#000',
     fontSize: 24
   },
@@ -87,4 +88,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Chats;
+export default Groups;
